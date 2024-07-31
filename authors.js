@@ -4,6 +4,7 @@ console.log(pool);
 
 export async function getAuthors() {
   // Query the database and return all authors
+  return "ok";
 }
 
 export async function getAuthorById(id) {
