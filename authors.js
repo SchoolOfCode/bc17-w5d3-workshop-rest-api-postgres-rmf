@@ -1,10 +1,13 @@
 // Import the 'pool' object so our helper functions can interact with the PostgreSQL database
 import { pool } from "./db/index.js";
-console.log(pool);
+
 
 export async function getAuthors() {
   // Query the database and return all authors
-  return "ok";
+ const queryText = "SELECT authors FROM books"
+ console.log(queryText)
+ return "ok"
+
 }
 
 export async function getAuthorById(id) {
