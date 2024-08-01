@@ -18,6 +18,10 @@ export async function getAuthorById(id) {
 }
 
 export async function createAuthor(author) {
+  const queryText = "INSERT INTO authors (first_name, last_name) VALUES ($1, $2)"
+  const result = await pool.query()
+  console.log(queryText)
+  return result
   // Query the database to create an author and return the newly created author
 }
 
