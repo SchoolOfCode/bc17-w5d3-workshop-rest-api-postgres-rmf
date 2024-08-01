@@ -4,10 +4,10 @@ import { pool } from "./db/index.js";
 
 export async function getAuthors() {
   // Query the database and return all authors
- const queryText = "SELECT authors FROM books"
+ const queryText = "SELECT * FROM authors"
+ const result = await pool.query(queryText)
  console.log(queryText)
- return "ok"
-
+ return result
 }
 
 export async function getAuthorById(id) {
