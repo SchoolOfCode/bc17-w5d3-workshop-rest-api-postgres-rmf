@@ -11,7 +11,10 @@ export async function getAuthors() {
 }
 
 export async function getAuthorById(id) {
-  // Query the database and return the author with a matching id or null
+  const queryText = "SELECT * FROM authors WHERE id = $1"
+  const result = await pool.query(queryText, [id])
+  console.log(queryText)
+  return result
 }
 
 export async function createAuthor(author) {
